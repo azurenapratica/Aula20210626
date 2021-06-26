@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: siteaula06 
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: siteaula06
+  template:
+    metadata:
+      labels:
+        app: siteaula06 
+    spec:
+      containers:
+        - name: siteaula06 
+          image: anpazdevops.azurecr.io/siteaula06
+          ports:
+          - containerPort: 80
